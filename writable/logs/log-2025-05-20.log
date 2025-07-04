@@ -1,0 +1,80 @@
+ERROR - 2025-05-20 10:35:30 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-20 10:35:30 --> 🔑 User ID from session: 3
+ERROR - 2025-05-20 10:35:30 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-05-20 10:35:30 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-05-20 10:35:30 --> ✅ Clock-in recorded successfully
+ERROR - 2025-05-20 13:55:44 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-20 13:55:44 --> 🔑 User ID from session: 4
+ERROR - 2025-05-20 13:55:44 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-05-20 13:55:44 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-05-20 13:55:44 --> ✅ Clock-in recorded successfully
+ERROR - 2025-05-20 13:57:32 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-20 13:57:32 --> 🔑 User ID from session: 1
+ERROR - 2025-05-20 13:57:32 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-05-20 13:57:32 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-05-20 13:57:32 --> ✅ Clock-in recorded successfully
+ERROR - 2025-05-20 19:35:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\employee_project\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\employee_project\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'employee_db', 3306, '', 0)
+#1 C:\xampp\htdocs\employee_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\employee_project\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\employee_project\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\employee_project\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\employee_project\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\employee_project\app\Controllers\AuthController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\employee_project\system\CodeIgniter.php(933): App\Controllers\AuthController->processLogin()
+#8 C:\xampp\htdocs\employee_project\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\employee_project\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\employee_project\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\employee_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\employee_project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\employee_project\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\employee_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\employee_project\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\employee_project\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\employee_project\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\employee_project\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\employee_project\app\Controllers\AuthController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\employee_project\system\CodeIgniter.php(933): App\Controllers\AuthController->processLogin()
+#7 C:\xampp\htdocs\employee_project\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\xampp\htdocs\employee_project\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\employee_project\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\employee_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\employee_project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-20 19:35:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: process-login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->processLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

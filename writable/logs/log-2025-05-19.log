@@ -1,0 +1,63 @@
+ERROR - 2025-05-19 20:47:15 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 20:47:15 --> 📦 Raw body: {"lat": 12.3456, "lon": 78.9012}
+ERROR - 2025-05-19 20:47:15 --> 📄 Parsed JSON: Array
+(
+    [lat] => 12.3456
+    [lon] => 78.9012
+)
+
+ERROR - 2025-05-19 20:52:08 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 20:52:08 --> 🔑 User ID from session: 
+ERROR - 2025-05-19 20:52:08 --> ❌ User not logged in
+ERROR - 2025-05-19 20:53:03 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 20:53:03 --> 🔑 User ID from session: 
+ERROR - 2025-05-19 20:53:03 --> ❌ User not logged in
+ERROR - 2025-05-19 20:54:31 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 20:54:31 --> 🔑 User ID from session: 1
+ERROR - 2025-05-19 20:54:31 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-05-19 20:54:31 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-05-19 20:54:31 --> ✅ Clock-in recorded successfully
+ERROR - 2025-05-19 21:07:03 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 21:07:03 --> 🔑 User ID from session: 
+ERROR - 2025-05-19 21:07:03 --> ❌ User not logged in
+ERROR - 2025-05-19 21:09:29 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 21:09:29 --> 🔑 User ID from session: 
+ERROR - 2025-05-19 21:09:29 --> ❌ User not logged in
+ERROR - 2025-05-19 21:31:57 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 21:31:57 --> 🔑 User ID from session: 1
+ERROR - 2025-05-19 21:31:57 --> ⛔ User already clocked in
+ERROR - 2025-05-19 21:32:06 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 21:32:06 --> 🔑 User ID from session: 1
+ERROR - 2025-05-19 21:32:06 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-05-19 21:32:06 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-05-19 21:32:06 --> ✅ Clock-in recorded successfully
+ERROR - 2025-05-19 21:34:58 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 21:34:58 --> 🔑 User ID from session: 1
+ERROR - 2025-05-19 21:34:58 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-05-19 21:34:58 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-05-19 21:34:58 --> ✅ Clock-in recorded successfully
+ERROR - 2025-05-19 21:35:10 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-05-19 21:35:10 --> 🔑 User ID from session: 1
+ERROR - 2025-05-19 21:35:10 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-05-19 21:35:10 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-05-19 21:35:10 --> ✅ Clock-in recorded successfully

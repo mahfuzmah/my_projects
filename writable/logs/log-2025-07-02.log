@@ -1,0 +1,10 @@
+ERROR - 2025-07-02 18:49:58 --> ✅ Clock-in endpoint was hit
+ERROR - 2025-07-02 18:49:58 --> 🔑 User ID from session: 1
+ERROR - 2025-07-02 18:49:59 --> 📦 Raw body: {"lat":23.8221934,"lon":90.4219536}
+ERROR - 2025-07-02 18:49:59 --> 📄 Parsed JSON: Array
+(
+    [lat] => 23.8221934
+    [lon] => 90.4219536
+)
+
+ERROR - 2025-07-02 18:49:59 --> ✅ Clock-in recorded successfully

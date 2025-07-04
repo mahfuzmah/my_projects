@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  z-index: 1001;
+  display: none;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.sidebar-logo h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar-menu a:hover {
+  background-color: #334155;
+  transform: translateX(5px);
+}
+
+.sidebar-menu .logout {
+  background-color: #dc2626;
+  text-align: center;
+}
+
+.sidebar-menu .logout:hover {
+  background-color: #b91c1c;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 30px;
+  transition: margin-left 0.3s ease-in-out;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .admin-sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    
+  }
+}
