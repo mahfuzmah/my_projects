@@ -1,0 +1,26 @@
+# Environment file (contains sensitive info)
+.env
+
+# Writable directories (cache, logs, sessions, uploads)
+writable/cache/
+writable/logs/
+writable/session/
+writable/uploads/
+
+# Composer dependencies (if you use composer)
+vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# PHPUnit cache (optional)
+.phpunit.result.cache
+
+# Logs and temporary files
+*.log
+*.tmp
