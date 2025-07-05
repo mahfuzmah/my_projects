@@ -15,7 +15,6 @@ class EmployeeBaseController extends Controller
         $this->session = session();
 
         if (!$this->session->get('logged_in')) {
-            // Not logged in, force redirect
             return redirect()->to('/login')->send();
             exit;
         }

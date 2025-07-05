@@ -69,12 +69,10 @@ body {
     font-weight: bold;
 }
 
-/* Optional: zebra striping */
 .attendance-container tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Responsive overflow */
 @media (max-width: 768px) {
     .attendance-container table {
         display: block;
@@ -83,7 +81,6 @@ body {
     }
 }
 
-/* Optional: fixed widths for first columns */
 .attendance-container th:nth-child(1),
 .attendance-container td:nth-child(1) {
     width: 60px;

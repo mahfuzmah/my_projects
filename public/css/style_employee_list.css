@@ -54,7 +54,7 @@ th {
 
 .edit-btn {
     display: inline-block;
-    background-color: #2577f2; /* Bootstrap-like warning color */
+    background-color: #2577f2; 
     color: #000;
     padding: 6px 10px;
     border-radius: 4px;
@@ -74,7 +74,7 @@ th {
 
 .delete-btn {
     display: inline-block;
-    background-color: #dc3545; /* Bootstrap-like danger color */
+    background-color: #dc3545; 
     color: #fff;
     padding: 6px 10px;
     border-radius: 4px;

@@ -8,14 +8,12 @@
     <div class="attendance-container">
         <h2>Attendance Dashboard</h2>
 
-        <!-- Clock In/Out Buttons -->
         <?php if ($status === 'not_clocked_in'): ?>
             <button type="button" onclick="handleClock('in')" class="clock-btn">Clock In</button>
         <?php elseif ($status === 'clocked_in'): ?>
             <button type="button" onclick="handleClock('out', <?= $attendance_id ?>)" class="clock-btn clock-out">Clock Out</button>
         <?php endif; ?>
 
-        <!-- Attendance Table -->
         <table>
             <thead>
                 <tr>
@@ -51,7 +49,6 @@
         </table>
     </div>
 
-    <!-- Handle Clock In/Out -->
     <script>
         function handleClock(type, id = null) {
             console.log("Clock function triggered:", type, id);
@@ -81,11 +78,10 @@
                         if (!response.ok) {
                             throw new Error("HTTP " + response.status);
                         }
-                        return response.text(); // Get raw text to debug
+                        return response.text(); 
                     })
                     .then(text => {
                         console.log("Raw Response:", text);
-                        // Try parsing JSON only if it's expected
                         try {
                             const data = JSON.parse(text);
                             console.log("Parsed Data:", data);

@@ -1,4 +1,3 @@
-<!-- app/Views/auth/register.php -->
 <?= $this->include('partials/header') ?>
 
 <head>

@@ -17,7 +17,6 @@ class Employee extends EmployeeBaseController
         return view('employee_list', $data);
     }
 
-    // ✅ Correct placement: inside the class
     public function create()
     {
         if (session()->get('role') !== 'admin') {
@@ -31,21 +30,17 @@ class Employee extends EmployeeBaseController
     {
         $model = new EmployeeModel();
 
-        // Get data from POST
         $data = [
             'name'     => $this->request->getPost('name'),
             'email'    => $this->request->getPost('email'),
             'position' => $this->request->getPost('position'),
         ];
 
-        // Insert into DB
         $model->insert($data);
 
-        // Redirect to employee list
         return redirect()->to('/employees');
     }
 
-        // Show Edit Form
     public function edit($id)
     {
         if (session()->get('role') !== 'admin') {
@@ -62,7 +57,6 @@ class Employee extends EmployeeBaseController
         return view('employee_edit', $data);
     }
 
-    // Handle Form Submission (Update)
     public function update($id)
     {
         if (session()->get('role') !== 'admin') {

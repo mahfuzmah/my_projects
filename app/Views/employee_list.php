@@ -12,7 +12,6 @@
             <span><?= esc(session()->get('username')); ?></span>
         </div>
 
-        <!-- 👇 New Attendance link -->
         <a href="<?= base_url('attendance') ?>" class="nav-btn">Attendance</a>
         <a href="<?= base_url('attendance/report') ?>" class="nav-btn">Summary</a>
         <a href="<?= base_url('logout') ?>" class="logout-btn">Logout</a>
@@ -22,7 +21,6 @@
     <div class="container">
         <h1>Employee List</h1>
 
-        <!-- Flash Message -->
         <?php if (session()->getFlashdata('message')): ?>
             <div class="alert-success">
                 <?= session()->getFlashdata('message') ?>
@@ -40,7 +38,7 @@
                 <th>Gender</th>
                 <th>Job Type</th>
                 <th>Joined Date</th>
-                <th>Edit</th> <!-- New column for Edit button -->
+                <th>Edit</th> 
             </tr>
             <?php $serial = 1; ?>
             <?php foreach($employees as $employee): ?>

@@ -25,7 +25,7 @@ class AttendanceController extends BaseController
 
         $attendanceModel = new \App\Models\AttendanceModel();
 
-        // Get last attendance record
+        
         $lastRecord = $attendanceModel->where('user_id', $user_id)->orderBy('id', 'DESC')->first();
 
         if ($lastRecord && !$lastRecord['clock_out']) {
@@ -36,7 +36,7 @@ class AttendanceController extends BaseController
             $attendance_id = null;
         }
 
-        // Get all attendance history for the user
+        
         $history = $attendanceModel->where('user_id', $user_id)->orderBy('id', 'DESC')->findAll();
 
         return view('attendance', [
@@ -60,7 +60,7 @@ class AttendanceController extends BaseController
             return $this->response->setJSON(['status' => 'not_logged_in']);
         }
     
-        // Check if already clocked in
+        
         $existing = $attendanceModel
             ->where('user_id', $userId)
             ->where('clock_out', null)
@@ -71,7 +71,7 @@ class AttendanceController extends BaseController
             return $this->response->setJSON(['status' => 'already_clocked_in']);
         }
     
-        // Parse raw JSON body
+        
         $body = $this->request->getBody();
         log_message('error', '📦 Raw body: ' . $body);
     
@@ -85,7 +85,7 @@ class AttendanceController extends BaseController
     
         $location = $input['lat'] . ', ' . $input['lon'];
     
-        // Save to DB
+        
         $attendanceModel->save([
             'user_id' => $userId,
             'clock_in' => date('Y-m-d H:i:s'),

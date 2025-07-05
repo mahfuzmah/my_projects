@@ -3,7 +3,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Toggle button */
 .sidebar-toggle {
   position: fixed;
   top: 15px;
@@ -18,7 +17,6 @@ body {
   display: none;
 }
 
-/* Sidebar */
 .admin-sidebar {
   width: 250px;
   height: 100vh;
@@ -78,7 +76,6 @@ body {
   min-height: 100vh;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .sidebar-toggle {
     display: block;
@@ -94,6 +91,6 @@ body {
 
   .main-content {
     margin-left: 0;
-    
+
   }
 }

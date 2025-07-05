@@ -7,9 +7,8 @@ class Shift extends BaseController
 {
     public function index()
     {
-        // Only allow admin
         if (session()->get('role') !== 'admin') {
-            return redirect()->to('/dashboard'); // or show 403
+            return redirect()->to('/dashboard');
         }
 
         $model = new ShiftModel();

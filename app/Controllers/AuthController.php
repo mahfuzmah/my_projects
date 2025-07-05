@@ -7,13 +7,11 @@ use App\Models\UserModel;
 
 class AuthController extends BaseController
 {
-    // ✅ Show Login Form
     public function login()
     {
         return view('auth/login');
     }
 
-    // ✅ Process Login
     public function processLogin()
     {
         $username = $this->request->getPost('username');
@@ -27,10 +25,9 @@ class AuthController extends BaseController
                 'logged_in' => true,
                 'username'  => $user['username'],
                 'user_id'   => $user['id'],
-                'role'      => $user['role'], // ✅ Set role in session
+                'role'      => $user['role'], 
             ]);
     
-            // ✅ Redirect based on user role
             return ($user['role'] === 'admin') 
                 ? redirect()->to('/employees') 
                 : redirect()->to('/attendance');
@@ -41,13 +38,11 @@ class AuthController extends BaseController
     
     
 
-    // ✅ Show Registration Form
     public function register()
     {
         return view('auth/register');
     }
 
-    // ✅ Process Registration
     public function processRegister()
     {
         $userModel = new \App\Models\UserModel();
@@ -63,7 +58,6 @@ class AuthController extends BaseController
             'email'        => $this->request->getPost('email'),
         ];
 
-        // ✅ Handle picture upload
         $picture = $this->request->getFile('picture');
         if ($picture && $picture->isValid() && !$picture->hasMoved()) {
             $newName = $picture->getRandomName();
@@ -77,7 +71,6 @@ class AuthController extends BaseController
     }
 
 
-    // ✅ Logout
     public function logout()
     {
         session()->destroy();

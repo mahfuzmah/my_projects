@@ -7,11 +7,8 @@
 </head>
 <body>
 
-<!-- Toggle button for mobile -->
 <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
 
-<!-- Start container -->
 <div class="admin-container">
 
-  <!-- Sidebar inside the container -->
   <?= $this->include('partials/admin_sidebar') ?>

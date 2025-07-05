@@ -9,11 +9,9 @@ class AdminDashboard extends BaseController
 {
     public function index()
     {
-        // Optional: Load models to gather stats
         $employeeModel = new EmployeeModel();
         $attendanceModel = new AttendanceModel();
 
-        // Example stats (these will show on dashboard)
         $data = [
             'totalEmployees' => $employeeModel->countAll(),
             'todayAttendance' => $attendanceModel
@@ -21,7 +19,6 @@ class AdminDashboard extends BaseController
                 ->countAllResults()
         ];
 
-        // Load view with data
         return view('admin/dashboard', $data);
     }
 }
